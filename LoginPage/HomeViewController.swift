@@ -12,7 +12,6 @@ import SwiftKeychainWrapper
 class HomeViewController: UIViewController {
 
     @IBAction func btnLogout(_ sender: Any) {
-        //let keychainResult = KeychainWrapper.removeObjectForKey(KEY_UID)
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: "id")//.remove(key: "id")
         print("ID removed from keychain \(keychainResult)")
         performSegue(withIdentifier: "LogoutSegue", sender: nil)

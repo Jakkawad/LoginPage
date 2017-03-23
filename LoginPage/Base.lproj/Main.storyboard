@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCW-in-2B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="889"/>
+            <point key="canvasLocation" x="137" y="872"/>
         </scene>
         <!--Member Only View Controller-->
         <scene sceneID="iGQ-L0-V7w">
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zb7-fr-mxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="1627"/>
+            <point key="canvasLocation" x="1532" y="1558"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Iay-Fc-Y3Y">
@@ -240,10 +240,10 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfY-OW-EX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="788"/>
+            <point key="canvasLocation" x="825" y="872"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9K2-FL-2OQ"/>
+        <segue reference="BM4-en-X35"/>
     </inferredMetricsTieBreakers>
 </document>

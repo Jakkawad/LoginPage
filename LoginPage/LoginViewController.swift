@@ -19,8 +19,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var txtUsername: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
-//    @IBOutlet weak var txtUsername: FancyField!
-//    @IBOutlet weak var txtPassword: FancyField!
     @IBOutlet weak var lblWarnning: UILabel!
     
     @IBAction func btnLogin(_ sender: Any) {
@@ -44,6 +42,22 @@ class LoginViewController: UIViewController {
             txtPassword.layer.borderWidth = 1.0
             txtPassword.layer.borderColor = UIColor.red.cgColor
             lblWarnning.isHidden = false
+            // Shake
+//            let animation = CABasicAnimation(keyPath: "position")
+//            animation.duration = 0.07
+//            animation.repeatCount = 4
+//            animation.autoreverses = true
+//            animation.fromValue = NSValue(CGPoint: CGPointMake(txtField.center.x - 10, txtField.center.y))
+//            animation.toValue = NSValue(CGPoint: CGPointMake(txtField.center.x + 10, txtField.center.y))
+//            txtField.layer.addAnimation(animation, forKey: "position")
+            let animation = CABasicAnimation(keyPath: "position")
+            animation.duration = 0.07
+            animation.repeatCount = 4
+            animation.autoreverses = true
+            animation.fromValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x - 10, y: txtUsername.center.y))
+            animation.toValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x + 10, y: txtUsername.center.y))
+            txtUsername.layer.add(animation, forKey: "position")
+            
         } else {
             txtUsername.layer.borderColor = UIColor.clear.cgColor
             txtPassword.layer.borderColor = UIColor.clear.cgColor

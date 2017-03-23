@@ -10,19 +10,8 @@ import UIKit
 import SwiftKeychainWrapper
 
 class MemberOnlyViewController: UIViewController {
-    
-    func previousViewController() {
-        
-    }
-//    override func viewWillAppear(_ animated: Bool) {
-//        if let _ = KeychainWrapper.standard.string(forKey: "id"){
-//            print("ID found in keychain")
-//            performSegue(withIdentifier: "LoginSegue", sender: nil)
-//        } else {
-//            print("ID not found in keychain")
-//        }
-//    }
-//    
+
+
     override func viewDidAppear(_ animated: Bool) {
         
 //        print("member viewDidAppear")
