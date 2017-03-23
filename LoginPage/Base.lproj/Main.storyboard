@@ -97,6 +97,14 @@
                                     <action selector="btnLogin:" destination="YyL-dA-NUf" eventType="touchUpInside" id="jCP-KB-VSn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnW-Jw-fDB">
+                                <rect key="frame" x="159" y="370" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="btnRegister:" destination="YyL-dA-NUf" eventType="touchUpInside" id="eO1-hB-JrA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69q-ck-f5E">
                                 <rect key="frame" x="172" y="408" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -111,11 +119,40 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="LoginSegue" id="BM4-en-X35"/>
                         <segue destination="7oY-cP-oAB" kind="showDetail" identifier="StartSegue" action="showViewController:sender:" id="JW6-rC-Cgy"/>
+                        <segue destination="4uL-vf-AD9" kind="presentation" identifier="RegisterSegue" id="LET-Bh-T6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCW-in-2B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="872"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="2SA-PA-uWR">
+            <objects>
+                <viewController id="4uL-vf-AD9" customClass="RegisterViewController" customModule="LoginPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3MF-Ep-wWz"/>
+                        <viewControllerLayoutGuide type="bottom" id="bJq-T8-SPb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="md5-Gw-E0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qqC-Yc-OC2">
+                                <rect key="frame" x="329" y="28" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="btnClose:" destination="4uL-vf-AD9" eventType="touchUpInside" id="1Pd-ni-rsG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bga-3u-9i6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="119" y="1558"/>
         </scene>
         <!--Member Only View Controller-->
         <scene sceneID="iGQ-L0-V7w">

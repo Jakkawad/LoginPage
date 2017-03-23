@@ -15,6 +15,10 @@ class StartViewController: UIViewController {
         performSegue(withIdentifier: "LoginSegue", sender: nil)
     }
     
+    @IBAction func btnRegister(_ sender: Any) {
+        performSegue(withIdentifier: "RegisterSegue", sender: nil)
+    }
+    
     @IBAction func btnSkip(_ sender: Any) {
         performSegue(withIdentifier: "StartSegue", sender: nil)
     }

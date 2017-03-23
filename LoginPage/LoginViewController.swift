@@ -22,7 +22,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lblWarnning: UILabel!
     
     @IBAction func btnLogin(_ sender: Any) {
-        login(username: txtUsername.text!, password: txtPassword.text!)
+//        print("txtUsername: \(txtUsername.text!)")
+        if txtUsername.text == "" && txtPassword.text == "" {
+//            print("nil")
+            loginFail(status: true)
+        } else {
+//            print("not nil")
+            login(username: txtUsername.text!, password: txtPassword.text!)
+        }
+//        login(username: txtUsername.text!, password: txtPassword.text!)
     }
     
     @IBAction func dismissLogin(_ sender: Any) {
@@ -79,7 +87,7 @@ class LoginViewController: UIViewController {
                         self.users.append(userObject)
                     }
                     self.user = self.users[0]
-                    print("user[0]: \(self.user.id)")
+//                    print("user[0]: \(self.user.id)")
                     // MARK: SwiftKeychainWrapper
 //                    let keychainResult = KeychainWrapper.defaultKeychainWrapper.set(self.user.id, forKey: "id")
                     let keychainResult = KeychainWrapper.standard.set(self.user.id, forKey: "id")
