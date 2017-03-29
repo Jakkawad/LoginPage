@@ -13,6 +13,7 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        checkUser(id: )
         // Do any additional setup after loading the view.
     }
 

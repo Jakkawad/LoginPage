@@ -45,12 +45,16 @@ class LoginViewController: UIViewController {
     
     func loginFail(status: Bool) {
         if status {
-            txtUsername.layer.borderWidth = 1.0
-            txtUsername.layer.borderColor = UIColor.red.cgColor
-            txtPassword.layer.borderWidth = 1.0
-            txtPassword.layer.borderColor = UIColor.red.cgColor
-            lblWarnning.isHidden = false
+            txtUsername.wrongInput()
+//            txtUsername.correctInput()
+            txtPassword.wrongInput()
+//            txtUsername.layer.borderWidth = 1.0
+//            txtUsername.layer.borderColor = UIColor.red.cgColor
+//            txtPassword.layer.borderWidth = 1.0
+//            txtPassword.layer.borderColor = UIColor.red.cgColor
+//            lblWarnning.isHidden = false
             // Shake
+//            Swift2
 //            let animation = CABasicAnimation(keyPath: "position")
 //            animation.duration = 0.07
 //            animation.repeatCount = 4
@@ -58,17 +62,23 @@ class LoginViewController: UIViewController {
 //            animation.fromValue = NSValue(CGPoint: CGPointMake(txtField.center.x - 10, txtField.center.y))
 //            animation.toValue = NSValue(CGPoint: CGPointMake(txtField.center.x + 10, txtField.center.y))
 //            txtField.layer.addAnimation(animation, forKey: "position")
-            let animation = CABasicAnimation(keyPath: "position")
-            animation.duration = 0.07
-            animation.repeatCount = 4
-            animation.autoreverses = true
-            animation.fromValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x - 10, y: txtUsername.center.y))
-            animation.toValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x + 10, y: txtUsername.center.y))
-            txtUsername.layer.add(animation, forKey: "position")
+//            Swift3
+//            let animation = CABasicAnimation(keyPath: "position")
+//            animation.duration = 0.07
+//            animation.repeatCount = 4
+//            animation.autoreverses = true
+//            animation.fromValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x - 10, y: txtUsername.center.y))
+//            animation.toValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x + 10, y: txtUsername.center.y))
+//            txtUsername.layer.add(animation, forKey: "position")
+//            txtUsername.shake(duration: 0.07, repeatCount: 4)
+//            txtUsername.shake(duration: 0.07, repeatCount: 4, autoReverses: true)
+            txtPassword.shake(duration: 0.07, repeatCount: 4, autoReverses: true)
             
         } else {
-            txtUsername.layer.borderColor = UIColor.clear.cgColor
-            txtPassword.layer.borderColor = UIColor.clear.cgColor
+            txtUsername.normalInput()
+            txtPassword.normalInput()
+//            txtUsername.layer.borderColor = UIColor.clear.cgColor
+//            txtPassword.layer.borderColor = UIColor.clear.cgColor
             lblWarnning.isHidden = true
             // Dismiss
             dismiss(animated: true, completion: nil)
@@ -93,6 +103,7 @@ class LoginViewController: UIViewController {
                     let keychainResult = KeychainWrapper.standard.set(self.user.id, forKey: "id")
 //                    let keychainResult = KeychainWrapper.standard.set("Some String", forKey: "myKey", withAccessibility: .AfterFirstUnlock)
 //                    let saveSuccessful: Bool = customKeychainWrapperInstance.set("Some String", forKey: "myKey")
+                    print("Id Key: \(self.user.id)")
                     print("Data saved to keychain \(keychainResult)")
                 } else {
 //                    print("Login Fail")
@@ -130,3 +141,25 @@ class LoginViewController: UIViewController {
 
 }
 
+// Shake
+//let animation = CABasicAnimation(keyPath: "position")
+//animation.duration = 0.07
+//animation.repeatCount = 4
+//animation.autoreverses = true
+//animation.fromValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x - 10, y: txtUsername.center.y))
+//animation.toValue = NSValue(cgPoint: CGPoint(x: txtUsername.center.x + 10, y: txtUsername.center.y))
+//txtUsername.layer.add(animation, forKey: "position")
+
+//extension UITextField {
+//    func shake(duration: Double, repeatCount: Float){
+////        let textField = UITextField(frame: frame)
+//        let animation = CABasicAnimation(keyPath: "position")
+//        animation.duration = duration
+//        animation.repeatCount = repeatCount
+//        animation.autoreverses = true
+//        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 10, y: self.center.y))
+//        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
+//        self.layer.add(animation, forKey: "position")
+////        return textField
+//    }
+//}

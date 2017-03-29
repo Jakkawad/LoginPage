@@ -34,6 +34,10 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        let md5Data = MD5(string:"Hello")
+//        let md5Hex =  md5Data.map { String(format: "%02hhx", $0) }.joined()
+//        print("md5Hex: \(md5Hex)")
+        
         // Do any additional setup after loading the view.
     }
 
